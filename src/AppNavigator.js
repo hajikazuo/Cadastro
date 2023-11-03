@@ -1,14 +1,14 @@
 import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import ProductCards from './src/ProductCards';
-import SignupForm from './src/Form';
+import ProductCards from './ProductCards';
+import SignupForm from './Form';
 
 const AppNavigator = createStackNavigator({
   Home: {
     screen: ProductCards,
     navigationOptions: {
-      title: 'Produtos',
+      title: 'Products',
     },
   },
   Signup: {
@@ -19,8 +19,4 @@ const AppNavigator = createStackNavigator({
   },
 });
 
-const AppContainer = createAppContainer(AppNavigator);
-
-export default function App() {
-  return <AppContainer />;
-}
+export default createAppContainer(AppNavigator);
